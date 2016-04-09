@@ -1,0 +1,28 @@
+//centro el formulario del login
+.caja {
+  width: 200px;
+  border: 1px solid #004515;
+  margin: 200px auto;
+}
+
+.caja>input {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+}
+
+.caja>input {
+  padding: 0.6em 0.8em;
+}
+
+input {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+  padding: 0.6em 0.8em;
+}
+
+.cajon {
+  flex: 1;
+  padding: 0.6em 0.8em;
+  display: block;
+  font: 1.2em 'Montserrat Alternates';  
+}

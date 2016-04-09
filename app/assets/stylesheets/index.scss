@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+
+* {
+    margin: 0;
+    padding: 0;
+    font: 0.9em 'Montserrat Alternates';
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font: 4.2em 'Montserrat Alternates';
+  text-align: center;
+  color: rgb(26, 188, 156);
+  background-color: #004515;
+}
+
+body {
+  background-color: #1BCB50;
+  }
+  
+// esto es para el menu de arriba
+.field {
+  display: flex;
+  position: relative;
+  float: right;
+  width: 40%;
+  flex-direction: row;
+}
+
+.field>input [type=text],
+.field>button {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+}
+
+.field>input [type=text] {
+  flex: 1;
+  padding: 0.6em;
+  border: 0.2em solid rgb(26, 188, 156); //color del boton
+}
+
+.field>button {
+  padding: 0.6em 0.8em;
+  background-color: rgb(26, 188, 156);
+}
+
+button {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+  padding: 0.6em 0.8em;
+  background-color: rgb(26, 188, 156);
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  importe: 9.99
+  concepto: MyString
+  procesador: MyString
+
+two:
+  nombre: MyString
+  importe: 9.99
+  concepto: MyString
+  procesador: MyString
