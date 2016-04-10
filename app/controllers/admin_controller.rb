@@ -21,7 +21,7 @@ class AdminController < ApplicationController
     
     Usuario.create(usuariosHash)
     @usuarios=Usuario.all
-    render "index"
+    render "pag_admin"
   end
   
   def borrar
@@ -29,7 +29,7 @@ class AdminController < ApplicationController
     
     Usuario.delete id
     @usuarios=Usuario.all
-    render "index"
+    render "pag_admin"
   end
   
   def modificar_vista
@@ -54,6 +54,6 @@ class AdminController < ApplicationController
     usuarioABuscar=Usuario.find id
     usuarioABuscar.update_attributes(usuariosHash)
     @usuarios=Usuario.all
-    render "index"
+    render "pag_admin"
   end
 end
