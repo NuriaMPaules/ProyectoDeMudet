@@ -5036,3 +5036,1543 @@ ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=0):
   Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
   Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (257.1ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:36:51 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 0]]
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 181ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2016-04-10 12:37:01 +0200
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 222ms (Views: 221.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 12:37:03 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17: 				<th>Borrar</th>
+    18: 				<th>Modificar</th>
+    19: 			</tr>
+    20: 			<%for usuario in @usuarios%>
+    21: 			<tr>
+    22: 				<td><%=usuario.nombre%></td>
+    23: 				<td><%=usuario.importe%></td>
+  app/views/admin/pag_admin.html.erb:20:in `_app_views_admin_pag_admin_html_erb__936477138_76156512'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (133.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (210.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (570.6ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 12:37:28 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 294ms (Views: 291.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for ::1 at 2016-04-10 12:37:39 +0200
+Processing by AdminController#index as HTML
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 187ms (Views: 185.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2016-04-10 12:37:43 +0200
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 150ms (Views: 149.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 12:37:44 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 173ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:39:02 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 184ms (Views: 183.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=voib&importe=57&concepto=gobn&procesador=uvon&crear=crear" for ::1 at 2016-04-10 12:39:10 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"voib", "importe"=>"57", "concepto"=>"gobn", "procesador"=>"uvon", "crear"=>"crear"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.5ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:39:10.236430"], ["updated_at", "2016-04-10 10:39:10.236430"]]
+  [1m[36m (114.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 369ms (Views: 228.1ms | ActiveRecord: 128.0ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:47:06 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 208ms (Views: 202.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:47:08 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 314ms (Views: 309.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:47:08 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (1.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 372ms (Views: 365.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:47:08 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 220ms (Views: 212.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:47:09 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 322ms (Views: 321.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2016-04-10 12:47:30 +0200
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 185ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 12:47:32 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 298ms (Views: 296.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:47:34 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 173ms (Views: 172.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=nuria&importe=4165&concepto=alguno&procesador=yo&crear=crear" for ::1 at 2016-04-10 12:47:47 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"nuria", "importe"=>"4165", "concepto"=>"alguno", "procesador"=>"yo", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:47:47.522315"], ["updated_at", "2016-04-10 10:47:47.522315"]]
+  [1m[36m (103.4ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 111.4ms)
+
+ActionView::Template::Error (undefined method `each' for #<Usuario:0x81dcc20>):
+    19: 				<th>Borrar</th>
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<%for usuario in @usuarios%>
+    23: 			<tr>
+    24: 				<td><%=usuario.nombre%></td>
+    25: 				<td><%=usuario.importe%></td>
+  app/views/admin/index.html.erb:22:in `_app_views_admin_index_html_erb___445238319_65386044'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (119.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (261.1ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:49:25 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 201ms (Views: 200.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=nuria&importe=52&concepto=clicks&procesador=yo&crear=crear" for ::1 at 2016-04-10 12:49:36 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"nuria", "importe"=>"52", "concepto"=>"clicks", "procesador"=>"yo", "crear"=>"crear"}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:49:36.411485"], ["updated_at", "2016-04-10 10:49:36.411485"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 105.0ms)
+
+ActionView::Template::Error (undefined method `each' for #<Usuario:0x88afaa8>):
+    19: 				<th>Borrar</th>
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<%for usuario in @usuarios%>
+    23: 			<tr>
+    24: 				<td><%=usuario.nombre%></td>
+    25: 				<td><%=usuario.importe%></td>
+  app/views/admin/index.html.erb:22:in `_app_views_admin_index_html_erb___445238319_65386044'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (128.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (286.1ms)
+
+
+Started GET "/admin/nuevo?nombre=nuria&importe=52&concepto=clicks&procesador=yo&crear=crear" for ::1 at 2016-04-10 12:50:30 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"nuria", "importe"=>"52", "concepto"=>"clicks", "procesador"=>"yo", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:50:30.502819"], ["updated_at", "2016-04-10 10:50:30.502819"]]
+  [1m[36m (107.6ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 114.6ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Usuarios):
+    19: 				<th>Borrar</th>
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<%for @usuarios in Usuarios.all%>
+    23: 			<tr>
+    24: 				<td><%=usuario.nombre%></td>
+    25: 				<td><%=usuario.importe%></td>
+  app/views/admin/index.html.erb:22:in `_app_views_admin_index_html_erb___445238319_72002364'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (118.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (261.1ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:51:55 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 217ms (Views: 216.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 12:51:55 +0200
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:51:56 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:51:56.894440"], ["updated_at", "2016-04-10 10:51:56.894440"]]
+  [1m[35m (199.1ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 204.1ms)
+
+ActionView::Template::Error (undefined method `each' for #<Usuario:0x8007030>):
+    19: 				<th>Borrar</th>
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<%for usuario in @usuarios%>
+    23: 			<tr>
+    24: 				<td><%=usuario.nombre%></td>
+    25: 				<td><%=usuario.importe%></td>
+  app/views/admin/index.html.erb:22:in `_app_views_admin_index_html_erb___445238319_67120284'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (59.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (285.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (137.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (290.1ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:52:14 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (60.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:52:14.319592"], ["updated_at", "2016-04-10 10:52:14.319592"]]
+  [1m[36m (81.2ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 142.2ms)
+
+ActionView::Template::Error (undefined local variable or method `usuario' for #<#<Class:0x895d2c8>:0x929e1a0>):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=usuario.nombre%></td>
+    24: 				<td><%=usuario.importe%></td>
+    25: 				<td><%=usuario.concepto%></td>
+    26: 				<td><%=usuario.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_76867260'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (126.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (291.1ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:52:18 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:52:18.173215"], ["updated_at", "2016-04-10 10:52:18.173215"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (68.0ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 96.0ms)
+
+ActionView::Template::Error (undefined local variable or method `usuario' for #<#<Class:0x895d2c8>:0x874f698>):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=usuario.nombre%></td>
+    24: 				<td><%=usuario.importe%></td>
+    25: 				<td><%=usuario.concepto%></td>
+    26: 				<td><%=usuario.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_76867260'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (119.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (263.6ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:52:45 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:52:45.882411"], ["updated_at", "2016-04-10 10:52:45.882411"]]
+  [1m[36m (99.1ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 104.1ms)
+
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuario.nombre%></td>
+    24: 				<td><%=@usuario.importe%></td>
+    25: 				<td><%=@usuario.concepto%></td>
+    26: 				<td><%=@usuario.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_68022480'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (122.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (265.0ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:53:19 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:53:19.215638"], ["updated_at", "2016-04-10 10:53:19.215638"]]
+  [1m[35m (120.3ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 127.3ms)
+
+ActionView::Template::Error (undefined local variable or method `usuario' for #<#<Class:0x895d2c8>:0x8edfeb0>):
+    24: 				<td><%=@usuarios.importe%></td>
+    25: 				<td><%=@usuarios.concepto%></td>
+    26: 				<td><%=@usuarios.procesador%></td>
+    27: 				<td><a href="/admin/borrar?id=<%=usuario.id%>">Borrar</a></td>
+    28: 				<td><a href="/admin/modificar_vista?id=<%=usuario.id%>">Modificar</a></td>
+    29: 			</tr>
+    30: 		</table>
+  app/views/admin/index.html.erb:27:in `_app_views_admin_index_html_erb___445238319_74905332'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (119.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (270.0ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:53:31 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (14.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:53:31.581270"], ["updated_at", "2016-04-10 10:53:31.581270"]]
+  [1m[36m (78.5ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 92.5ms)
+
+ActionView::Template::Error (undefined local variable or method `usuario' for #<#<Class:0x895d2c8>:0x87c7038>):
+    24: 				<td><%=@usuarios.importe%></td>
+    25: 				<td><%=@usuarios.concepto%></td>
+    26: 				<td><%=@usuarios.procesador%></td>
+    27: 				<td><a href="/admin/borrar?id=<%=usuario.id%>">Borrar</a></td>
+    28: 				<td><a href="/admin/modificar_vista?id=<%=usuario.id%>">Modificar</a></td>
+    29: 			</tr>
+    30: 		</table>
+  app/views/admin/index.html.erb:27:in `_app_views_admin_index_html_erb___445238319_74905332'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (140.4ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (125.7ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (279.2ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:53:48 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (12.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:53:48.880554"], ["updated_at", "2016-04-10 10:53:48.880554"]]
+  [1m[35m (71.3ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 288ms (Views: 194.7ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 12:53:49 +0200
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:53:52 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (85.8ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `nombre' for #<Usuario::ActiveRecord_Relation:0x7d1d968>):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuarios.nombre%></td>
+    24: 				<td><%=@usuarios.importe%></td>
+    25: 				<td><%=@usuarios.concepto%></td>
+    26: 				<td><%=@usuarios.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_65593452'
+  app/controllers/admin_controller.rb:28:in `borrar'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (205.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (459.7ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:53:53 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `nombre' for #<Usuario::ActiveRecord_Relation:0x9467910>):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuarios.nombre%></td>
+    24: 				<td><%=@usuarios.importe%></td>
+    25: 				<td><%=@usuarios.concepto%></td>
+    26: 				<td><%=@usuarios.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_68417976'
+  app/controllers/admin_controller.rb:28:in `borrar'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (123.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (288.2ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:54:00 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 176ms (Views: 176.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=sfhaosifn&importe=352&concepto=sianf&procesador=askin&crear=crear" for ::1 at 2016-04-10 12:54:08 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"sfhaosifn", "importe"=>"352", "concepto"=>"sianf", "procesador"=>"askin", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (35.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 10:54:08.265699"], ["updated_at", "2016-04-10 10:54:08.265699"]]
+  [1m[36m (87.0ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 308ms (Views: 175.1ms | ActiveRecord: 122.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 12:56:12 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 340ms (Views: 340.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 12:56:15 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 10:56:15.183528"], ["updated_at", "2016-04-10 10:56:15.183528"]]
+  [1m[35m (116.5ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 554ms (Views: 368.6ms | ActiveRecord: 122.5ms)
+
+
+Started GET "/admin/borrar?id=" for ::1 at 2016-04-10 12:56:22 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>""}
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 0]]
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (31.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `nombre' for #<Usuario::ActiveRecord_Relation:0x8c647c8>):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuarios.nombre%></td>
+    24: 				<td><%=@usuarios.importe%></td>
+    25: 				<td><%=@usuarios.concepto%></td>
+    26: 				<td><%=@usuarios.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_65593452'
+  app/controllers/admin_controller.rb:28:in `borrar'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.9ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (127.6ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (254.0ms)
+
+
+Started GET "/admin/modificar_vista?id=" for ::1 at 2016-04-10 12:56:24 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>""}
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=0):
+  app/controllers/admin_controller.rb:33:in `modificar_vista'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.9ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (115.9ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (238.4ms)
+
+
+Started GET "/admin/modificar_vista?id=" for ::1 at 2016-04-10 12:56:24 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>""}
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=0):
+  app/controllers/admin_controller.rb:33:in `modificar_vista'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.1ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (116.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (256.1ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:01:34 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 189ms (Views: 187.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:01:49 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.5ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 11:01:49.808573"], ["updated_at", "2016-04-10 11:01:49.808573"]]
+  [1m[36m (90.5ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 100.0ms)
+
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuario.nombre%></td>
+    24: 				<td><%=@usuario.importe%></td>
+    25: 				<td><%=@usuario.concepto%></td>
+    26: 				<td><%=@usuario.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_71069364'
+  app/controllers/admin_controller.rb:21:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (133.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (289.5ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:05:41 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 11:05:41.614373"], ["updated_at", "2016-04-10 11:05:41.614373"]]
+  [1m[35m (95.6ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 105.6ms)
+
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<th>Modificar</th>
+    21: 			</tr>
+    22: 			<tr>
+    23: 				<td><%=@usuario.nombre%></td>
+    24: 				<td><%=@usuario.importe%></td>
+    25: 				<td><%=@usuario.concepto%></td>
+    26: 				<td><%=@usuario.procesador%></td>
+  app/views/admin/index.html.erb:23:in `_app_views_admin_index_html_erb___445238319_71069364'
+  app/controllers/admin_controller.rb:24:in `nuevo'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (158.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (126.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (276.5ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:07:17 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (34.5ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 11:07:17.550319"], ["updated_at", "2016-04-10 11:07:17.550319"]]
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 523ms (Views: 311.1ms | ActiveRecord: 162.0ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:11:38 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 11:11:38.267687"], ["updated_at", "2016-04-10 11:11:38.267687"]]
+  [1m[35m (116.0ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 482ms (Views: 305.5ms | ActiveRecord: 125.5ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:12:55 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 11:12:55.879408"], ["updated_at", "2016-04-10 11:12:55.879408"]]
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 439ms (Views: 267.5ms | ActiveRecord: 133.5ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:14:24 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-04-10 11:14:24.798023"], ["updated_at", "2016-04-10 11:14:24.798023"]]
+  [1m[35m (108.6ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 485ms (Views: 327.5ms | ActiveRecord: 117.6ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:18:48 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "usuarios" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-10 11:18:49.188524"], ["updated_at", "2016-04-10 11:18:49.188524"]]
+  [1m[36m (95.5ms)[0m  [1mcommit transaction[0m
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 437ms (Views: 274.0ms | ActiveRecord: 105.5ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfa&importe=1111&concepto=asdf&procesador=asdf&crear=crear" for ::1 at 2016-04-10 13:19:39 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfa", "importe"=>"1111", "concepto"=>"asdf", "procesador"=>"asdf", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "asdfa"], ["importe", 1111.0], ["concepto", "asdf"], ["procesador", "asdf"], ["created_at", "2016-04-10 11:19:39.399672"], ["updated_at", "2016-04-10 11:19:39.399672"]]
+  [1m[35m (85.0ms)[0m  commit transaction
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 433ms (Views: 260.5ms | ActiveRecord: 91.5ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:22:54 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 174ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for ::1 at 2016-04-10 13:24:02 +0200
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (35.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (221.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (130.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (296.5ms)
+
+
+Started GET "/admin/index" for ::1 at 2016-04-10 13:24:10 +0200
+Processing by AdminController#index as HTML
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 235ms (Views: 223.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:24:20 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 183ms (Views: 182.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=asdfasd&importe=4&concepto=sadfasd&procesador=asdfas&crear=crear" for ::1 at 2016-04-10 13:24:38 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"asdfasd", "importe"=>"4", "concepto"=>"sadfasd", "procesador"=>"asdfas", "crear"=>"crear"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "asdfasd"], ["importe", 4.0], ["concepto", "sadfasd"], ["procesador", "asdfas"], ["created_at", "2016-04-10 11:24:38.891115"], ["updated_at", "2016-04-10 11:24:38.891115"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (2.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 385ms (Views: 254.0ms | ActiveRecord: 106.5ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:25:28 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 228ms (Views: 226.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=adsfa&importe=&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 13:25:33 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"adsfa", "importe"=>"", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "adsfa"], ["importe", 0.0], ["concepto", ""], ["procesador", ""], ["created_at", "2016-04-10 11:25:33.447100"], ["updated_at", "2016-04-10 11:25:33.447100"]]
+  [1m[35m (100.1ms)[0m  commit transaction
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 427ms (Views: 269.0ms | ActiveRecord: 109.6ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:26:01 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 183ms (Views: 181.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:29:50 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 301ms (Views: 298.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=SDDFAS&importe=1.77&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 13:30:06 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"SDDFAS", "importe"=>"1.77", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "SDDFAS"], ["importe", 1.77], ["concepto", ""], ["procesador", ""], ["created_at", "2016-04-10 11:30:06.937997"], ["updated_at", "2016-04-10 11:30:06.937997"]]
+  [1m[35m (92.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (2.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 555ms (Views: 383.0ms | ActiveRecord: 108.5ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:31:24 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 207ms (Views: 205.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=kkkkk&importe=-1.77&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 13:31:57 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"kkkkk", "importe"=>"-1.77", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (16.0ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "kkkkk"], ["importe", -1.77], ["concepto", ""], ["procesador", ""], ["created_at", "2016-04-10 11:31:57.356082"], ["updated_at", "2016-04-10 11:31:57.356082"]]
+  [1m[35m (88.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (2.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 375ms (Views: 250.5ms | ActiveRecord: 107.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:32:25 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 183ms (Views: 181.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/nuevo?nombre=fff&importe=-2.67&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 13:32:34 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"fff", "importe"=>"-2.67", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "fff"], ["importe", -2.67], ["concepto", ""], ["procesador", ""], ["created_at", "2016-04-10 11:32:34.957093"], ["updated_at", "2016-04-10 11:32:34.957093"]]
+  [1m[35m (101.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 407ms (Views: 275.0ms | ActiveRecord: 109.5ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:33:00 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 182ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:33:06 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 286ms (Views: 282.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 13:33:07 +0200
+
+
+Started GET "/admin/transacciones" for ::1 at 2016-04-10 13:33:33 +0200
+Processing by AdminController#transacciones as HTML
+  Rendered admin/transacciones.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 270ms (Views: 267.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 13:33:34 +0200
+
+
+Started GET "/admin/nuevo?nombre=llll%C3%B1ll&importe=0.46&concepto=&procesador=&crear=crear" for ::1 at 2016-04-10 13:33:59 +0200
+Processing by AdminController#nuevo as HTML
+  Parameters: {"nombre"=>"llllñll", "importe"=>"0.46", "concepto"=>"", "procesador"=>"", "crear"=>"crear"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "usuarios" ("nombre", "importe", "concepto", "procesador", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nombre", "llllñll"], ["importe", 0.46], ["concepto", ""], ["procesador", ""], ["created_at", "2016-04-10 11:33:59.635223"], ["updated_at", "2016-04-10 11:33:59.635223"]]
+  [1m[35m (81.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 373ms (Views: 270.0ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/admin/borrar?id=63" for ::1 at 2016-04-10 13:34:12 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>"63"}
+  [1m[35mSQL (119.6ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 63]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 320ms (Views: 192.5ms | ActiveRecord: 120.6ms)
+
+
+Started GET "/admin/borrar?id=62" for ::1 at 2016-04-10 13:34:16 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mSQL (94.5ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 62]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 339ms (Views: 238.0ms | ActiveRecord: 95.5ms)
+
+
+Started GET "/admin/modificar_vista?id=61" for ::1 at 2016-04-10 13:34:28 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 61]]
+  Rendered admin/modificar_vista.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 229ms (Views: 223.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/modificar_vista?id=58" for ::1 at 2016-04-10 13:34:40 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 58]]
+  Rendered admin/modificar_vista.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 183ms (Views: 178.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/modificar_vista?id=58" for ::1 at 2016-04-10 13:35:43 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>"58"}
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 58]]
+  Rendered admin/modificar_vista.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 215ms (Views: 208.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/usuario/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:35:55 +0200
+
+ActionController::RoutingError (No route matches [GET] "/usuario/modificar"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (197.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (130.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (298.6ms)
+
+
+Started GET "/usuario/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:36:23 +0200
+
+ActionController::RoutingError (No route matches [GET] "/usuario/modificar"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (142.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (299.0ms)
+
+
+Started GET "/usuario/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:36:36 +0200
+
+ActionController::RoutingError (No route matches [GET] "/usuario/modificar"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (185.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (154.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (331.5ms)
+
+
+Started GET "/admin/borrar?id=62" for ::1 at 2016-04-10 13:36:48 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 62]]
+  [1m[35mUsuario Load (1.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 215ms (Views: 206.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/borrar?id=62" for ::1 at 2016-04-10 13:36:54 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 62]]
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 305ms (Views: 298.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 13:36:55 +0200
+
+
+Started GET "/admin/modificar_vista?id=58" for ::1 at 2016-04-10 13:36:58 +0200
+Processing by AdminController#modificar_vista as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mUsuario Load (4.0ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 58]]
+  Rendered admin/modificar_vista.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 387ms (Views: 370.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:37:02 +0200
+Processing by AdminController#modificar as HTML
+  Parameters: {"id"=>"58", "nombre"=>"asdfasd", "importe"=>"5", "concepto"=>"sadfasd", "procesador"=>"asdfas", "modificar"=>"modificar"}
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  UPDATE "usuarios" SET "importe" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?  [["importe", 5.0], ["updated_at", "2016-04-10 11:37:02.860924"], ["id", 58]]
+  [1m[36m (113.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 451ms (Views: 303.5ms | ActiveRecord: 119.5ms)
+
+
+Started GET "/admin/login" for ::1 at 2016-04-10 13:37:23 +0200
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 197ms (Views: 196.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 13:37:25 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 245ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 13:40:12 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  Rendered admin/pag_admin.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17: 				<th>Borrar</th>
+    18: 				<th>Modificar</th>
+    19: 			</tr>
+    20: 			<%for usuario in @usuarios%>
+    21: 			<tr>
+    22: 				<td><%=usuario.nombre%></td>
+    23: 				<td><%=usuario.importe%></td>
+  app/views/admin/pag_admin.html.erb:20:in `_app_views_admin_pag_admin_html_erb__936477138_67205940'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (35.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (304.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (177.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (402.6ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 13:43:29 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  [1m[36mUsuario Load (2.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/pag_admin.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 323ms (Views: 303.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/admin/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:44:00 +0200
+Processing by AdminController#modificar as HTML
+  Parameters: {"id"=>"58", "nombre"=>"asdfasd", "importe"=>"5", "concepto"=>"sadfasd", "procesador"=>"asdfas", "modificar"=>"modificar"}
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mUsuario Load (1.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 284ms (Views: 266.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/modificar?id=58&nombre=asdfasd&importe=5&concepto=sadfasd&procesador=asdfas&modificar=modificar" for ::1 at 2016-04-10 13:44:04 +0200
+Processing by AdminController#modificar as HTML
+  Parameters: {"id"=>"58", "nombre"=>"asdfasd", "importe"=>"5", "concepto"=>"sadfasd", "procesador"=>"asdfas", "modificar"=>"modificar"}
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 395ms (Views: 372.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:44:04 +0200
+
+
+Started GET "/assets/index.self-25bf55195c0045ebc40672e2dce96367a908975abd723208760550a804eb08ae.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/pag_admin.self-8c25595e5bbdb59ad007d4be91131a38ee2850192e347bd1ea836fcbac3e2cdd.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/transaccion.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/login.self-c84a732bb0c97247005ce07cec36c6aea427178944127724ca68103043831711.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/transacciones.self-17aaeb6f5052e4768394fb967d2626535e2ab8ffd06ba8c51778877977b47d4b.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 13:44:05 +0200
+
+
+Started GET "/admin/borrar?id=62" for ::1 at 2016-04-10 13:44:10 +0200
+Processing by AdminController#borrar as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 62]]
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 201ms (Views: 192.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/index" for ::1 at 2016-04-10 13:44:16 +0200
+Processing by AdminController#index as HTML
+  [1m[35mUsuario Load (1.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 260ms (Views: 256.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/index" for ::1 at 2016-04-10 13:44:32 +0200
+Processing by AdminController#index as HTML
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 269ms (Views: 266.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2016-04-10 13:45:16 +0200
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 178ms (Views: 176.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/pag_admin?usuario=&contrasenia=&submit=entrar" for ::1 at 2016-04-10 13:45:20 +0200
+Processing by AdminController#pag_admin as HTML
+  Parameters: {"usuario"=>"", "contrasenia"=>"", "submit"=>"entrar"}
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered admin/pag_admin.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 293ms (Views: 289.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/index" for ::1 at 2016-04-10 13:55:40 +0200
+Processing by AdminController#index as HTML
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered admin/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 242ms (Views: 239.0ms | ActiveRecord: 1.0ms)

@@ -1,12 +1,15 @@
 class AdminController < ApplicationController
-def index
+  def index
     @usuarios=Usuario.all
   end
-  def alta_vista
+
+  def pag_admin
+    @usuarios = Usuario.all
   end
+  
   def nuevo
     nombre=params[:nombre]
-    importe=params[:importe].to_i
+    importe=params[:importe].to_d
     concepto=params[:concepto]
     procesador=params[:procesador]
     
@@ -20,6 +23,7 @@ def index
     @usuarios=Usuario.all
     render "index"
   end
+  
   def borrar
     id=params[:id].to_i
     
@@ -27,11 +31,13 @@ def index
     @usuarios=Usuario.all
     render "index"
   end
+  
   def modificar_vista
     id=params[:id].to_i
     
     @usuario=Usuario.find id
   end
+  
   def modificar
     id=params[:id].to_i
     nombreNuevo=params[:nombre]

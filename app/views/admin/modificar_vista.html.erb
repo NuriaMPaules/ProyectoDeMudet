@@ -1,8 +1,8 @@
 <h1>Adios</h1>
-<form action="/usuario/modificar">
+<form action="/admin/modificar">
 	<input type="hidden" name="id" value="<%=@usuario.id%>"><br/>
-	Nombre: <input type="number" name="nombre" value="<%=@usuario.nombre%>"><br/>
-	Importe: <input type="text" name="importe" value="<%=@usuario.importe%>"><br/>
+	Nombre: <input type="text" name="nombre" value="<%=@usuario.nombre%>"><br/>
+	Importe: <input type="number" name="importe" value="<%=@usuario.importe%>"><br/>
 	Concepto: <input type="text" name="concepto" value="<%=@usuario.concepto%>"><br/>
 	Procesador: <input type="text" name="procesador" value="<%=@usuario.procesador%>"><br/>
 	<input type="submit" name="modificar" value="modificar"><br/>

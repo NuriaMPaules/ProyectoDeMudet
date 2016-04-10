@@ -16,8 +16,6 @@
 				<th>Importe</th>
 				<th>Concepto</th>
 				<th>Procesador</th>
-				<th>Borrar</th>
-				<th>Modificar</th>
 			</tr>
 			<%for usuario in @usuarios%>
 			<tr>
@@ -25,8 +23,7 @@
 				<td><%=usuario.importe%></td>
 				<td><%=usuario.concepto%></td>
 				<td><%=usuario.procesador%></td>
-				<td><a href="/admin/borrar?id=<%=usuario.id%>">Borrar</a></td>
-				<td><a href="/admin/modificar_vista?id=<%=usuario.id%>">Modificar</a></td>
+				
 			</tr>
 			<%end%>
 		</table>
