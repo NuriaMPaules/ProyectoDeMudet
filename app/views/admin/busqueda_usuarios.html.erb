@@ -1,0 +1,31 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h3>Busca el Nombre del Usuario</h3>
+		<div class="bus">
+			<form action="/admin/buscar_por_nombre">
+			Nombre:<input type="text" name="nombre"><br>
+			<input style="background-color: #1ABC9C" type="submit" value="buscar">
+			<button><a href="index">Volver al Index</a></button>
+			</form>
+		</div>
+		<div class="caja_bus">
+			<%if @usuariosEncontrados!=nil%>
+			<table>
+				<tr>
+					<th>Nombre</th>
+					<th>Importe</th>
+				</tr>
+				<%for usuario in @usuariosEncontrados%>
+				<tr>
+					<td><%=usuario.nombre%></td>
+					<td><%=usuario.importe%></td>
+				</tr>
+				<%end%>
+			</table>
+			<%end%>
+		</div>
+	</body>
+</html>

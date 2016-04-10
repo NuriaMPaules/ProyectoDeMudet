@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'admin/transacciones'
   get 'admin/alta_vista'
   get 'admin/modificar_vista'
+  get 'admin/busqueda_usuarios'
+  get 'admin/buscar_por_nombre'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

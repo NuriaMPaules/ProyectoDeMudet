@@ -4,7 +4,7 @@ class AdminController < ApplicationController
   end
 
   def pag_admin
-    @usuarios = Usuario.all
+    @usuarios=Usuario.all
   end
   
   def nuevo
@@ -34,7 +34,6 @@ class AdminController < ApplicationController
   
   def modificar_vista
     id=params[:id].to_i
-    
     @usuario=Usuario.find id
   end
   
@@ -55,5 +54,13 @@ class AdminController < ApplicationController
     usuarioABuscar.update_attributes(usuariosHash)
     @usuarios=Usuario.all
     render "pag_admin"
+  end
+  
+  def buscar_por_nombre
+    nombre=params[:nombre]
+    importe=params[:importe]
+    
+    @usuariosEncontrados=Usuario.where(:nombre=>nombre)
+    render "busqueda_usuarios"
   end
 end

@@ -1,0 +1,39 @@
+//centro el formulario del login
+.bus {
+  display: flex;
+  position: relative;
+  float: right;
+  width: 40%;
+  flex-direction: row;
+}
+
+.bus>input [type=text],
+.bus>button {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+}
+
+.bus>input [type=text] {
+  flex: 1;
+  padding: 0.6em;
+  border: 0.2em solid rgb(26, 188, 156); //color del boton
+}
+
+.bus>button {
+  padding: 0.6em 0.8em;
+  background-color: rgb(26, 188, 156);
+}
+
+button {
+  display: block;
+  font: 1.2em 'Montserrat Alternates';
+  padding: 0.6em 0.8em;
+  background-color: rgb(26, 188, 156);
+}
+
+.caja_bus {
+  flex: 1;
+  padding: 0.6em 0.8em;
+  display: block;
+  font: 1.2em 'Montserrat Alternates';  
+}
