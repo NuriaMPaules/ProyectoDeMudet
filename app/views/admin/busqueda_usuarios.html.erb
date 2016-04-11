@@ -17,11 +17,15 @@
 				<tr>
 					<th>Nombre</th>
 					<th>Importe</th>
+					<th>Concepto</th>
+					<th>Procesador</th>
 				</tr>
 				<%for usuario in @usuariosEncontrados%>
 				<tr>
 					<td><%=usuario.nombre%></td>
 					<td><%=usuario.importe%></td>
+					<td><%=usuario.concepto%></td>
+					<td><%=usuario.procesador%></td>
 				</tr>
 				<%end%>
 			</table>
